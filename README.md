@@ -12,8 +12,9 @@
 
 ## About this repository
 
-The official website of **The Lion Of Zion** (האריה מציון), a non-profit organization — 
-served as static files (HTML, CSS, images, self-hosted fonts) via **GitHub Pages**.
+The official website of **The Lion Of Zion** (האריה מציון), a non-profit organization —
+
+ — served as static files (HTML, CSS, images, self-hosted fonts) via **GitHub Pages**.
 
 - **Live site:** https://thelionofzion.org
 - **Contact:** tiger@thelionofzion.org
@@ -26,7 +27,7 @@ No framework
 No tracking scripts
 ```
 
-**..Just plain static HTML/CSS.**
+**.. Just plain static HTML/CSS.**
 
 
 
