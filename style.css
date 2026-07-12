@@ -69,10 +69,16 @@
   --page-bg: #ffffff;
   --text: #202124;
 
-  /* Fluid hero width — the single source of truth everything scales against.
-     ~17.5vw ≈ the size in the original design. Floor keeps the Hebrew
-     legible on phones; cap stops it ballooning on very wide screens. */
+  /* Fluid base scale. ~17.5vw ≈ the original size. Floor keeps the Hebrew
+     legible on phones; cap stops it ballooning on very wide screens.
+     The email scales off this base. */
+  /*
   --hero-w: clamp(160px, 17.5vw, 600px);
+  */
+  --hero-w: clamp(400px, 56vw, 1000px);
+
+  /* Hero image + title share this. Scale knob: 1.0 = same as base (email unaffected). */
+  --hero-display: calc(var(--hero-w) * 1.0);
 }
 
 * { box-sizing: border-box; }
@@ -93,7 +99,10 @@ body {
 
 /* Centered content column */
 .content {
+  max-width: 1200px;
+/*
   max-width: 640px;
+*/
   margin: 0 auto;
   padding: 24px 16px 64px;
   text-align: center;
@@ -105,7 +114,7 @@ body {
 
 .hero {
   display: block;
-  width: var(--hero-w);
+  width: var(--hero-display);
   height: auto;
   margin: 8px auto 0;
 }
@@ -113,9 +122,9 @@ body {
 .title {
   /* Matches the original title: Lato Black (900), tight tracking. */
   font-weight: 900;
-  /* Scales in step with the hero (~5.06% of its width ≈ 22.7px at the original
-     size, matching the original), with a readable floor for small screens. */
-  font-size: max(12px, calc(var(--hero-w) * 0.069));
+  /* Scales in step with the (enlarged) hero, keeping the same title-to-hero
+     ratio, with a readable floor for small screens. */
+  font-size: max(12px, calc(var(--hero-display) * 0.069));
   letter-spacing: -0.022em;
   line-height: 1.2;
   margin: 0.3em 0 0.4em;
