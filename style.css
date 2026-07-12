@@ -133,7 +133,7 @@ body {
 }
 
 .title a {
-  color: rgb(20, 55, 204);   /* original link color */
+  color: var(--brand-blue);   /* matches the hero + email blue */
   text-decoration: none;
 }
 .title a:hover {
