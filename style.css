@@ -75,7 +75,7 @@
   /*
   --hero-w: clamp(160px, 17.5vw, 600px);
   */
-  --hero-w: clamp(400px, 56vw, 1000px);
+  --hero-w: clamp(280px, 52vw, 1000px);
 
   /* Hero image + title share this. Scale knob: 1.0 = same as base (email unaffected). */
   --hero-display: calc(var(--hero-w) * 1.0);
@@ -104,7 +104,7 @@ body {
   max-width: 640px;
 */
   margin: 0 auto;
-  padding: 24px 16px 64px;
+  padding: 16px 16px 16px 16px;
   text-align: center;
 }
 
@@ -116,7 +116,7 @@ body {
   display: block;
   width: var(--hero-display);
   height: auto;
-  margin: 8px auto 0;
+  margin: auto auto;
 }
 
 .title {
