@@ -114,9 +114,11 @@ body {
 
 .hero {
   display: block;
-  width: var(--hero-display);
+  /* Never exceed the column width, so it always centers and never overflows
+     on narrow/zoomed windows (even when --hero-w hits its px minimum). */
+  width: min(var(--hero-display), 100%);
   height: auto;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .title {
